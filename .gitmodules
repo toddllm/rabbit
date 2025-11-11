@@ -19,3 +19,6 @@
 [submodule "services/combat-service"]
 	path = services/combat-service
 	url = git@github.com:toddllm/rabbit-combat-service.git
+[submodule "services/world-service"]
+	path = services/world-service
+	url = git@github.com:toddllm/rabbit-world-service.git

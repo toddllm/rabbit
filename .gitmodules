@@ -1,3 +1,21 @@
 [submodule "services/entity-service"]
 	path = services/entity-service
 	url = git@github.com:toddllm/rabbit-entity-service.git
+[submodule "services/player-service"]
+	path = services/player-service
+	url = git@github.com:toddllm/rabbit-player-service.git
+[submodule "services/api-gateway"]
+	path = services/api-gateway
+	url = git@github.com:toddllm/rabbit-api-gateway.git
+[submodule "services/boss-service"]
+	path = services/boss-service
+	url = git@github.com:toddllm/rabbit-boss-service.git
+[submodule "services/evolution-service-impl"]
+	path = services/evolution-service-impl
+	url = git@github.com:toddllm/rabbit-evolution-service.git
+[submodule "infrastructure/event-bus"]
+	path = infrastructure/event-bus
+	url = git@github.com:toddllm/rabbit-event-bus.git
+[submodule "services/combat-service"]
+	path = services/combat-service
+	url = git@github.com:toddllm/rabbit-combat-service.git

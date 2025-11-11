@@ -2,6 +2,8 @@
 
 **An enormous, persistent, online, multi-series universe where players are intelligent rabbits/bunnies who evolve through power tiers, fight gods, titans, AI, demons, shadows, and void anomalies, while also racing, building, trading, puzzling, and surviving.**
 
+> **🎯 First Principles Approach**: This project is **NOT** built on a fixed tech stack. Each component's technology is chosen based on specific requirements. See [FIRST-PRINCIPLES-APPROACH.md](docs/FIRST-PRINCIPLES-APPROACH.md) for details.
+
 ---
 
 ## 🌟 What is RABBIT?
@@ -186,23 +188,35 @@ Climb the ranks: **Burrow Bronze** → **Carrot Silver** → **Warren Gold** →
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Philosophy: First Principles Approach
 
-### Backend (Recommended)
-- **Language**: TypeScript (Node.js), Go, or Rust
-- **API**: REST + WebSocket (Socket.io or ws)
-- **Message Queue**: NATS or Kafka
-- **Cache**: Redis Cluster
-- **Database**: PostgreSQL with JSONB
-- **Container Orchestration**: Kubernetes or Docker Swarm
+> **⚠️ CRITICAL**: This project uses a **first principles approach**, NOT a fixed tech stack. Each service's technology is chosen based on specific requirements, not preferences.
 
-### Infrastructure
+### Read This First
+**[📖 First Principles Approach](docs/FIRST-PRINCIPLES-APPROACH.md)** - Required reading for all contributors
+
+### Current Service Implementations (Examples, Not Prescriptions)
+
+These are the **current** implementations. They can change if requirements change:
+
+- **Entity Service**: Rust (600K+ ops/sec, zero GC, memory safety)
+- **Combat Service**: Rust (deterministic <5μs calculations, no GC pauses)
+- **Player Service**: Go (thousands of concurrent auth requests, single binary)
+- **API Gateway**: Go (40K+ req/sec, 100K+ WebSocket connections)
+- **Boss Service**: Elixir/OTP (10K+ concurrent boss instances, fault isolation)
+- **Evolution Service**: Elixir/OTP (complex state machines, hot code swapping)
+- **Event Bus**: NATS (11M+ msgs/sec, sub-millisecond latency)
+
+**Why these choices?** See [FIRST-PRINCIPLES-APPROACH.md](docs/FIRST-PRINCIPLES-APPROACH.md) for detailed rationale.
+
+### Infrastructure (More Stable)
 - **Monitoring**: Prometheus + Grafana
 - **Logging**: ELK Stack or Loki
 - **Tracing**: Jaeger or Zipkin
-- **Secrets**: AWS Secrets Manager (as per CLAUDE.md)
+- **Secrets**: AWS Secrets Manager
+- **Container Orchestration**: Kubernetes or Docker Swarm
 
-### Client (Flexible)
+### Client (Completely Flexible)
 - **Any rendering engine** can connect via WebSocket + REST
 - Unity, Unreal, Godot, Three.js, Babylon.js, custom engine
 - Client receives state updates, sends input commands

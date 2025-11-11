@@ -20,14 +20,14 @@ git remote -v | grep origin | head -1
 echo ""
 
 # Check submodules
-echo "📦 Git Submodules (should be 8):"
+echo "📦 Git Submodules (should be 11):"
 SUBMODULE_COUNT=$(git submodule | wc -l | tr -d ' ')
 echo "   Found: $SUBMODULE_COUNT submodules"
 
-if [ "$SUBMODULE_COUNT" -eq 8 ]; then
+if [ "$SUBMODULE_COUNT" -eq 11 ]; then
     echo "   ✅ Correct number of submodules"
 else
-    echo "   ❌ ERROR: Expected 8 submodules, found $SUBMODULE_COUNT"
+    echo "   ❌ ERROR: Expected 11 submodules, found $SUBMODULE_COUNT"
 fi
 echo ""
 
@@ -54,7 +54,8 @@ echo ""
 echo "🔧 Service Directories:"
 services=("services/entity-service" "services/combat-service" "services/player-service"
           "services/api-gateway" "services/boss-service" "services/evolution-service-impl"
-          "services/world-service" "infrastructure/event-bus")
+          "services/world-service" "services/faction-service" "services/trading-service"
+          "services/pvp-service" "infrastructure/event-bus")
 
 for service in "${services[@]}"; do
     if [ -d "$service" ] && [ -f "$service/.git" ]; then
@@ -93,7 +94,7 @@ echo ""
 echo "======================================"
 echo "🎯 Summary:"
 echo "======================================"
-if [ "$SUBMODULE_COUNT" -eq 8 ] && [ "$EMPTY_COUNT" -eq 0 ]; then
+if [ "$SUBMODULE_COUNT" -eq 11 ] && [ "$EMPTY_COUNT" -eq 0 ]; then
     echo "✅ Setup is COMPLETE and ready to use!"
     echo ""
     echo "Next steps:"

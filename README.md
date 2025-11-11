@@ -211,6 +211,10 @@ These are the **current** implementations. They can change if requirements chang
 - **API Gateway**: Go (40K+ req/sec, 100K+ WebSocket connections)
 - **Boss Service**: Elixir/OTP (10K+ concurrent boss instances, fault isolation)
 - **Evolution Service**: Elixir/OTP (complex state machines, hot code swapping)
+- **World Service**: Go (zone/instance management, PostgreSQL spatial queries)
+- **Faction Service**: Go (reputation system, faction wars, Redis caching)
+- **Trading Service**: Go (marketplace, player-to-player trading, PostgreSQL)
+- **PvP Service**: Go (ELO matchmaking, rankings, Redis queue system)
 - **Event Bus**: NATS (11M+ msgs/sec, sub-millisecond latency)
 
 **Why these choices?** See [FIRST-PRINCIPLES-APPROACH.md](docs/FIRST-PRINCIPLES-APPROACH.md) for detailed rationale.

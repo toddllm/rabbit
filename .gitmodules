@@ -22,3 +22,12 @@
 [submodule "services/world-service"]
 	path = services/world-service
 	url = git@github.com:toddllm/rabbit-world-service.git
+[submodule "services/faction-service"]
+	path = services/faction-service
+	url = git@github.com:toddllm/rabbit-faction-service.git
+[submodule "services/trading-service"]
+	path = services/trading-service
+	url = git@github.com:toddllm/rabbit-trading-service.git
+[submodule "services/pvp-service"]
+	path = services/pvp-service
+	url = git@github.com:toddllm/rabbit-pvp-service.git

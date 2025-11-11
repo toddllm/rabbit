@@ -64,14 +64,17 @@ Three levels of instructions for AI agents:
 ├── 📄 README.md                  ← Project overview (with agent warning)
 ├── 🔧 verify-setup.sh            ← Health check script
 │
-├── services/                     ← 7 MICROSERVICES (git submodules)
+├── services/                     ← 10 MICROSERVICES (git submodules)
 │   ├── entity-service/           → toddllm/rabbit-entity-service (Rust)
 │   ├── combat-service/           → toddllm/rabbit-combat-service (Rust)
 │   ├── player-service/           → toddllm/rabbit-player-service (Go)
 │   ├── api-gateway/              → toddllm/rabbit-api-gateway (Go)
 │   ├── boss-service/             → toddllm/rabbit-boss-service (Elixir)
 │   ├── evolution-service-impl/   → toddllm/rabbit-evolution-service (Elixir)
-│   └── world-service/            → toddllm/rabbit-world-service (Go) ← NEW
+│   ├── world-service/            → toddllm/rabbit-world-service (Go)
+│   ├── faction-service/          → toddllm/rabbit-faction-service (Go) ← NEW
+│   ├── trading-service/          → toddllm/rabbit-trading-service (Go) ← NEW
+│   └── pvp-service/              → toddllm/rabbit-pvp-service (Go) ← NEW
 │
 ├── infrastructure/               ← INFRASTRUCTURE (git submodules)
 │   └── event-bus/                → toddllm/rabbit-event-bus (NATS)
@@ -87,7 +90,7 @@ Three levels of instructions for AI agents:
 └── shared/                       ← Shared utilities
 ```
 
-### GitHub Repositories (9 total)
+### GitHub Repositories (12 total)
 
 1. `toddllm/rabbit` - Monorepo
 2. `toddllm/rabbit-entity-service` - ECS service (Rust)
@@ -96,8 +99,11 @@ Three levels of instructions for AI agents:
 5. `toddllm/rabbit-api-gateway` - HTTP/WebSocket gateway (Go)
 6. `toddllm/rabbit-boss-service` - Boss AI (Elixir/OTP)
 7. `toddllm/rabbit-evolution-service` - Progression (Elixir/OTP)
-8. `toddllm/rabbit-world-service` - Zones/Instances (Go) ← NEW
-9. `toddllm/rabbit-event-bus` - NATS infrastructure
+8. `toddllm/rabbit-world-service` - Zones/Instances (Go)
+9. `toddllm/rabbit-faction-service` - Reputation/Factions (Go) ← NEW
+10. `toddllm/rabbit-trading-service` - Marketplace (Go) ← NEW
+11. `toddllm/rabbit-pvp-service` - Matchmaking/Rankings (Go) ← NEW
+12. `toddllm/rabbit-event-bus` - NATS infrastructure
 
 ### Verification
 
@@ -106,7 +112,7 @@ cd ~/rabbit
 ./verify-setup.sh
 ```
 
-**Result:** ✅ All 8 submodules present and verified
+**Result:** ✅ All 11 submodules present and verified
 
 ---
 
@@ -169,7 +175,7 @@ These choices can change if requirements change.
 ## 📊 Project Status
 
 ✅ **Monorepo:** Properly located at `~/rabbit/`
-✅ **Services:** 8 submodules configured and working
+✅ **Services:** 11 submodules configured and working
 ✅ **GitHub:** All repos created and synced
 ✅ **Documentation:** Comprehensive guides for agents and humans
 ✅ **Verification:** Script passes all checks

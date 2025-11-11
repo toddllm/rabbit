@@ -1,5 +1,11 @@
 # RABBIT: The Ultimate MMO Rabbit Universe
 
+> **🤖 AI AGENTS: READ [AGENT-READ-THIS-FIRST.md](AGENT-READ-THIS-FIRST.md) IMMEDIATELY**
+> **📍 WORK IN THIS DIRECTORY: `/Users/tdeshane/rabbit/`**
+> **❌ DO NOT create services in `~/rabbit-*` home directory**
+
+---
+
 **An enormous, persistent, online, multi-series universe where players are intelligent rabbits/bunnies who evolve through power tiers, fight gods, titans, AI, demons, shadows, and void anomalies, while also racing, building, trading, puzzling, and surviving.**
 
 > **🎯 First Principles Approach**: This project is **NOT** built on a fixed tech stack. Each component's technology is chosen based on specific requirements. See [FIRST-PRINCIPLES-APPROACH.md](docs/FIRST-PRINCIPLES-APPROACH.md) for details.
